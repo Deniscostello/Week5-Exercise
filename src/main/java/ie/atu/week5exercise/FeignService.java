@@ -1,5 +1,8 @@
 package ie.atu.week5exercise;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class FeignService {
     private final TodoClient todoClient;
     public FeignService(TodoClient todoClient){
@@ -8,11 +11,6 @@ public class FeignService {
 
     public TodoResponse fetchData(){
         TodoResponse td = todoClient.fetchData();
-        return td;
-    }
-
-    public TodoResponse fetchTodoData(){
-        TodoResponse td = todoClient.fetchTodoData();
         return td;
     }
 }
